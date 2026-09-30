@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><title>PackWise AI</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;600;800&display=swap">
+<link rel="stylesheet" href="style.css"></head><body>
+<header><h1>PackWise AI</h1><p>Enter a food and its storage conditions. Get a packaging recipe with shelf life, cost, risk and eco score.</p></header>
+<div class="wrap">
+<section class="card side" aria-label="Inputs">
+<h2>Food and conditions</h2>
+<label for="food">Food commodity</label><select id="food"></select>
+<label for="temp">Storage temperature <span id="tv"></span></label><input id="temp" type="range" min="-2" max="30" step="1" value="4">
+<label for="rh">Relative humidity <span id="rv"></span></label><input id="rh" type="range" min="30" max="100" step="1" value="90">
+<label for="tr">Transport</label><select id="tr"><option value="0">Local, under 1 day</option><option value="1" selected>Regional, 1 to 3 days</option><option value="2">Long haul, over 3 days</option></select>
+<h2 style="margin-top:20px">Priorities</h2>
+<label for="ws">Shelf life <span id="wsv"></span></label><input id="ws" type="range" min="0" max="10" value="6">
+<label for="wc">Low cost <span id="wcv"></span></label><input id="wc" type="range" min="0" max="10" value="3">
+<label for="we">Sustainability <span id="wev"></span></label><input id="we" type="range" min="0" max="10" value="2">
+<p class="hint">Everything recalculates as you move a slider. This is the what-if simulation.</p>
+</section>
+<main id="out"></main>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcode-generator/1.4.4/qrcode.min.js"></script>
+<script src="script.js"></script></body></html>
